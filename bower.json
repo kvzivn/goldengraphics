@@ -1,0 +1,17 @@
+{
+    "name": "Project",
+    "version": "0.0.1",
+    "authors": [],
+    "description": "Description",
+    "license": "",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "tests"
+    ],
+    "devDependencies": {
+    },
+    "dependencies": {}
+}
