@@ -1,8 +1,7 @@
 {
-  "name": "Unicorns",
-  "version": "1.0.0",
-  "description": "Front-end components for business success",
-  "main": "index.js",
+  "name": "Project",
+  "version": "0.0.1",
+  "description": "Description",
   "scripts": {
     "test": "karma start tests/karma-unit.conf.js"
   },
