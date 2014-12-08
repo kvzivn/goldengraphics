@@ -7,11 +7,10 @@
     'use strict';
 
     var gulp = require('gulp');
-    var browserSync = require('browser-sync');
 
     gulp.task('watch', ['styles'] ,function () {
       gulp.watch('stylesheets/**/*.scss', ['styles']);
-      gulp.watch('javascript/**/*.js', ['scripts', browserSync.reload]);
+      gulp.watch('javascript/**/*.js', ['scripts']);
     });
 
 }());
