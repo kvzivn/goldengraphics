@@ -6,14 +6,15 @@
 
     gulp.task('serve', ['watch'], function() {
         browserSync({
-            files: [
-                '**/*.html',
-                '**/*.css',
-                '**/*.js'
-            ],
             server: {
                 baseDir: './'
             },
+            files: [
+                'index.html',
+                'javascript/**/*.html',
+                'styleheets/**/*.css',
+                'javascript/**/*.js'
+            ],
             browser: ['google chrome']
         });
     });
