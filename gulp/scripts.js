@@ -1,20 +1,48 @@
-;(function() {
+;(function gulpScripts() {
     'use strict';
 
-    var gulp = require('gulp');
+    var gulp = require('gulp'),
 
-    var $ = require('gulp-load-plugins')({
-        pattern: ['gulp-*', 'main-bower-files']
+        $ = require('gulp-load-plugins')({
+            pattern: ['gulp-*', 'main-bower-files']
+        });
+
+
+    gulp.task('scripts', ['jshint', 'jscs'], function scripts() {
+        return gulp.src([
+                'javascript/**/*.js'
+            ])
+            .pipe($.size());
     });
 
 
-    gulp.task('scripts', function() {
+    gulp.task('lint', ['jshint', 'jscs'], function lint() {
+        return gulp.src('javascript/**/*.js')
+            .pipe($.size());
+    });
+
+
+    gulp.task('jshint', function jshint() {
         return gulp.src([
                 'javascript/**/*.js'
             ])
             .pipe($.jshint())
             .pipe($.jshint.reporter('jshint-stylish'))
-            .pipe($.size());
+            .pipe($.jshint.reporter('fail'))
+            .on('error', $.notify.onError(function onError(error) {
+                return error.message;
+            }));
+    });
+
+    gulp.task('jscs', function jscs() {
+        return gulp.src([
+                'javascript/**/*.js'
+            ])
+            .pipe($.jscs())
+            .on('error', $.notify.onError(function onError(error) {
+                return error.message;
+            }));
     });
 
 }());
+
