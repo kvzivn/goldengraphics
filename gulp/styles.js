@@ -18,6 +18,7 @@
         return gulp.src('stylesheets/styles.scss')
             .pipe($.rubySass())
             .pipe($.autoprefixer('last 2 version'))
+            .pipe(scsslint())
             .pipe(gulp.dest('stylesheets'))
             .pipe($.size());
     });
