@@ -1,17 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <!-- bower:css -->
-    <!-- endbower -->
-    <link rel="stylesheet" href="stylesheets/styles.css">
-</head>
-<body>
-    <h1>Welcome to you scaffolded application.</h1>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Golden Ratio Graphics</title>
+		<link rel="stylesheet" href="stylesheets/normalize.css" />
+		<link rel="stylesheet" href="stylesheets/demo.css" />
+		<link rel="stylesheet" href="stylesheets/component.css" />
+		<link rel="stylesheet" href="stylesheets/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<header class="codrops-header">
+				<h1>Golden Ratio Graphics <span>Simple tool for displaying the golden ratio in UI elements</span></h1>
+			</header>
+			<section class="content">
 
-    <!-- bower:js -->
-    <!-- endbower -->
-    <script src="javascript/app.js"></script>
-</body>
+				<div class="input--top">
+					<span class="input input--minoru">
+						<input class="input__field input__field--minoru" type="text" id="input-13" placeholder="A + B" onfocus="this.placeholder = ''" onblur="this.placeholder = 'A + B'" />
+						<label class="input__label input__label--minoru" for="input-13"></label>
+					</span>
+				</div>
+
+				<div class="input--bottom">
+					<span class="input input--minoru">
+						<input class="input__field input__field--minoru" type="text" id="input-14" placeholder="A" onfocus="this.placeholder = ''" onblur="this.placeholder = 'A'" />
+						<label class="input__label input__label--minoru" for="input-14"></label>
+					</span>
+
+					<span class="input input--minoru">
+						<input class="input__field input__field--minoru" type="text" id="input-15" placeholder="B" onfocus="this.placeholder = ''" onblur="this.placeholder = 'B'" />
+						<label class="input__label input__label--minoru" for="input-15"></label>
+					</span>
+				</div>
+
+			</section>
+		</div>
+		<script src="javascript/app.js"></script>
+	</body>
 </html>
